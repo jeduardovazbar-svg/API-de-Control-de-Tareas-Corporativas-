@@ -1,0 +1,23 @@
+{
+  "name": "api-de-control-de-tareas-corporativas-",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeduardovazbar-svg/API-de-Control-de-Tareas-Corporativas-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeduardovazbar-svg/API-de-Control-de-Tareas-Corporativas-/issues"
+  },
+  "homepage": "https://github.com/jeduardovazbar-svg/API-de-Control-de-Tareas-Corporativas-#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
