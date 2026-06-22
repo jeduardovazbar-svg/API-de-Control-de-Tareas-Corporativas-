@@ -18,6 +18,10 @@
   "homepage": "https://github.com/jeduardovazbar-svg/API-de-Control-de-Tareas-Corporativas-#readme",
   "description": "",
   "dependencies": {
-    "express": "^5.2.1"
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "helmet": "^8.2.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.7.1"
   }
 }
