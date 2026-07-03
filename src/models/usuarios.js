@@ -12,7 +12,7 @@ const usuarioSchema = new mongoose.Schema({
     },
     rol: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Rol', // Debe coincidir exactamente con el nombre del modelo de Rol
+        ref: 'roles', // Debe coincidir exactamente con el nombre del modelo de Rol
         required: true
     },
     fechaCreacion: {

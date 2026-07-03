@@ -12,7 +12,7 @@ const tareaSchema = new mongoose.Schema({
     },
     usuario: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Usuario', // Relaciona la tarea con un usuario específico
+        ref: 'usuarios', // Relaciona la tarea con un usuario específico
         required: true
     },
     fechaCreacion: {
