@@ -17,7 +17,7 @@ const tareaRoutes = require('./src/routes/tareaRoutes');
 
 
 app.get('/', (req, res) => {
-    res.send('🚀 ¡API Financiera corriendo con éxito en Vercel!');
+    res.send('🚀 ¡API Financiera corriendo con éxito en Render!');
 });
 
 // --- ENRUTAMIENTO DIRECTO A LOS CONTROLADORES ---
