@@ -260,14 +260,17 @@ app.delete('/api/tareas/:id', tareaController.eliminarTarea);
 const uri = process.env.MONGO_URI;
 
 mongoose.connect(uri)
-    .then(() => {
-        console.log('✅ Conectado exitosamente a MongoDB');
-        const PORT = process.env.PORT || 3000;
-        app.listen(PORT, () => {
-            console.log(`🚀 Servidor corriendo en el puerto ${PORT}`);
-            console.log(`👁️  Swagger UI listo en: http://localhost:${PORT}/api-docs`);
-        });
-    })
-    .catch((error) => {
-        console.error('❌ Error al conectar a MongoDB:', error.message);
+    .then(() => console.log('✅ Conectado exitosamente a MongoDB'))
+    .catch((error) => console.error('❌ Error al conectar a MongoDB:', error.message));
+
+
+// >>> SOLUCIÓN PARA RENDER: Solo levanta el puerto si NO estás en Vercel <<<
+if (!process.env.VERCEL) {
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+        console.log(`🚀 Servidor corriendo en el puerto ${PORT}`);
     });
+}
+
+// >>> SOLUCIÓN PARA VERCEL: Exportar la app <<<
+module.exports = app;
