@@ -1,13 +1,13 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-
+const verificarAppToken = require('./src/middlewares/appToken');
 
 const app = express();
 
 // Middleware para entender JSON
 app.use(express.json());
-
+app.use(verificarAppToken);//verificamos el token de app
 // Importar los controladores existentes
 const usuarioRoutes = require('./src/routes/usuarioRoutes');
 const rolRoutes = require('./src/routes/rolRoutes');
