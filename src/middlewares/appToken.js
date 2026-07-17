@@ -1,6 +1,6 @@
 const verificarAppToken = (req, res, next) => {
   // 1. Intentar obtener el token desde la cabecera 'x-app-token' o 'Authorization'
-  const tokenRecibido = req.headers['x-app-token'];
+  const tokenRecibido = req.headers['app-token'];
 
   // 2. Si el cliente no envió ningún token, rechazamos
   if (!tokenRecibido) {
