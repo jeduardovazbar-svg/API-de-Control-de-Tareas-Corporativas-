@@ -1,11 +1,13 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const helmet = require('helmet'); // IMPORTEMOS HELMET
 const verificarAppToken = require('./src/middlewares/appToken');
 
 const app = express();
 
 // Middleware para entender JSON
+app.use(helmet()); // ahora le decimos a nuestra app que usemos helmet
 app.use(express.json());
 app.use(verificarAppToken);//verificamos el token de app
 // Importar los controladores existentes
